@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class WordManager {
+public class WordManager{
     Scanner s = new Scanner(System.in);
     WordCRUD wordCRUD;
 
