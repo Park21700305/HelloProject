@@ -114,7 +114,7 @@ public class WordCRUD implements ICRUD{
 
     public void loadFile() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("MyDictoinary.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("MyDictionary.txt"));
             String line;
             int count = 0;
             while(true){
