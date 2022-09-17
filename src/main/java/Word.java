@@ -53,4 +53,8 @@ public class Word{
                 + String.format("%15s", word) + " " + meaning;
         return str;
     }
+
+    public String toFileSting(){
+        return this.level + "|" + this.word + "|" + this.meaning;
+    }
 }

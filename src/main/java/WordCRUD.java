@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -62,13 +59,27 @@ public class WordCRUD implements ICRUD{
         for(int i=0; i< list.size(); i++){
             String word = list.get(i).getWord();
             if(!word.contains(keyword)) continue;
-            System.out.print((i+1) + " ");
+            System.out.print((j+1) + " ");
             System.out.println(list.get(i).toString());
             idlist.add(i);
             j++;
         }
         System.out.println("-----------------------------------");
         return idlist;
+    }
+
+    public void listAll(int level){
+        ArrayList<Integer> idlist = new ArrayList<Integer>();
+        int j =0;
+        System.out.println("-----------------------------------");
+        for(int i=0; i< list.size(); i++){
+            int l = list.get(i).getLevel();
+            if(l != level) continue;
+            System.out.print((j+1) + " ");
+            System.out.println(list.get(i).toString());
+            j++;
+        }
+        System.out.println("-----------------------------------");
     }
 
     public void updateItem() {
@@ -126,5 +137,32 @@ public class WordCRUD implements ICRUD{
             throw new RuntimeException(e);
         }
 
+    }
+
+    public void saveFile() {
+        try {
+            PrintWriter print = new PrintWriter(new FileWriter("MyDictionary.txt"));
+            for(Word word : list){
+                print.write(word.toFileSting() + "\n");
+                //write는 개행을 하지 않기 때문에 개행 \n 추가.
+            }
+            print.close();
+            System.out.println("=> 파일 저장 완료 ");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void searchLevel() {
+        System.out.print("=> 원하는 레벨은? (1~3): ");
+        int level = s.nextInt();
+        listAll(level);
+    }
+
+    public void searchWord() {
+        System.out.print("=> 원하는 단어는? ");
+        String word = s.next();
+        listAll(word);
     }
 }
