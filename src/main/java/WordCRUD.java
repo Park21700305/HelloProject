@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -95,5 +99,32 @@ public class WordCRUD implements ICRUD{
             System.out.println("단어 삭제 완료 ");
         }
         else System.out.println("단어 삭제 취소 ");
+    }
+
+    public void loadFile() {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("MyDictoinary.txt"));
+            String line;
+            int count = 0;
+            while(true){
+                line = reader.readLine();
+                if(line == null) break;
+
+                String data[] = line.split("\\|");
+                int level = Integer.parseInt(data[0]);
+                String word = data[1];
+                String meaning = data[2];
+                list.add(new Word(0, level, word, meaning));
+                count++;
+            }
+
+            reader.close();
+            System.out.println("=> " + count + "개 단어 로딩완료 ");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
