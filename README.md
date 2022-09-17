@@ -27,3 +27,7 @@
 ### saveFile
 <img width="169" alt="image" src="https://user-images.githubusercontent.com/93187535/190856897-6630f0c7-e98a-477a-85c0-8299fc65427a.png">
 <img width="79" alt="image" src="https://user-images.githubusercontent.com/93187535/190856899-a1c3d264-cf59-40ef-ad93-7cb3ef8e41e5.png">
+
+## Mydictinonary_file
+<img width="675" alt="Mydictionary" src="https://user-images.githubusercontent.com/93187535/190858165-c4a96c8e-59b4-4957-b74d-93973a957945.png">
+
