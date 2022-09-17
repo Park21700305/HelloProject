@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class WordCRUD implements ICRUD{
     ArrayList<Word> list;
     Scanner s;
-
+    final String fname = "MyDictionary.txt";
     WordCRUD(Scanner s){
         list = new ArrayList<>();
         this.s = s;
@@ -114,34 +114,34 @@ public class WordCRUD implements ICRUD{
 
     public void loadFile() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("MyDictionary.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader(fname));
             String line;
             int count = 0;
             while(true){
                 line = reader.readLine();
                 if(line == null) break;
-
                 String data[] = line.split("\\|");
-                int level = Integer.parseInt(data[0]);
-                String word = data[1];
-                String meaning = data[2];
-                list.add(new Word(0, level, word, meaning));
-                count++;
-            }
+                try{ int level = Integer.parseInt(data[0]);
+                    String word = data[1];
+                    String meaning = data[2];
+                    list.add(new Word(0, level, word, meaning));
+                    count++;}
+                catch (NumberFormatException e){
 
+                }
+
+            }
             reader.close();
             System.out.println("=> " + count + "개 단어 로딩완료 ");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
-
     }
+
 
     public void saveFile() {
         try {
-            PrintWriter print = new PrintWriter(new FileWriter("MyDictionary.txt"));
+            PrintWriter print = new PrintWriter(new FileWriter(fname));
             for(Word word : list){
                 print.write(word.toFileSting() + "\n");
                 //write는 개행을 하지 않기 때문에 개행 \n 추가.

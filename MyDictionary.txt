@@ -1,1 +1,10 @@
-2 | Immediate | Áï½Ã, ´çÀåÀÇ2 | Calm | °í¿äÇÑ,Á¶¿ëÇÑ,ÁøÁ¤½ÃÅ°´Ù3 | devote | Çå½ÅÇÏ´Ù,¹ÙÄ¡´Ù2 | Scenery | Ç³°æ,°æÄ¡1 | rapid | ºü¸£°Ô,±Ş¼ÓÈ÷1 | Nowdays | ¿À´Ã³¯¿¡´Â,Çö´ë¿¡´Â2 | resemblance | ´àÀ½,À¯»ç1 | reduce | ÁÙÀÌ´Ù,°¨¼Ò½ÃÅ°´Ù1 | period | ±â°£,½Ã´ë3 | sore | ¾ÆÇÂ,¾²¸°2 | contain | Æ÷ÇÔÇÏ´Ù,~ÀÌ µé¾îÀÖ´Ù2 | permit | Çã°¡ÇÏ´Ù,Çã¶ôÇÏ´Ù
+3|persimmon|ê°
+2|pear|ë°°
+3|orientalMelon|ì°¸ì™¸
+1|grapes|í¬ë„
+3|fig|ë¬´í™”ê³¼
+3|pomegranate|ì„ë¥˜
+3|jujube|ëŒ€ì¶”
+1|mango|ë§ê³ 
+2|yuja|ìœ ì
+1| orange|ì˜¤ë Œì§€
