@@ -38,13 +38,13 @@ public class WordManager{
 
             }
             else if(menu == 4){
-                wordCRUD.addWord();
+                wordCRUD.addItem();
             }
             else if(menu == 5){
-
+                wordCRUD.updateItem();
             }
             else if(menu == 6){
-
+                wordCRUD.deleteItem();
             }
             else if(menu == 7){
 
